@@ -1,0 +1,5 @@
+int main ( ) {
+  printf ( "Hello, " "world!" ) ;
+  "This is a string with spaces"
+  "And this is ""two strings"
+}
