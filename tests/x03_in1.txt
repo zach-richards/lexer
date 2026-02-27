@@ -1,0 +1,29 @@
+This is a char 'X'
+'A''B''C'
+"This is a string"'X'
+'Q'"String"'R'"String"
+"This is not a char 'X' in a string"
+Special char '\n'
+/* Comment */
+/*
+   multi
+     line 
+       comment */
+/*
+   multi
+     line
+       comment 
+*/
+'c'/*
+   multi
+     line
+       comment
+*/"string"
+* Not a comment
+/*comment*//*comment*/
+"string"/*comment*/"string"'c'/*comment*/'c'
+/*in comment "string" */
+/*in comment 'c'*/
+"Ignored /*comment*/ in string"
+line end /
+start/middle/end
