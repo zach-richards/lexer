@@ -1,0 +1,8 @@
+:= .. << >> <> <= >= ** != => [ ] { } {: }: . < > ( ) + - * / | & ; , : = $ @
+:=..<<>><><=>=**!==>[]{}{:}:.><()+-*/|&;,=:$@
+class+seven
+a+b
+if and ifc
+cliff if elsefred ifif
+$@+==>{{:
+"string"/*comment*/"string"'c'/*comment*/'c'
