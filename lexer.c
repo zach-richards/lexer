@@ -72,7 +72,7 @@ int main(int argc, char* argv[]) {
             		continue;
         	}
 
-		if (ch == '/' && !isString && !isChar) {
+		if (ch == '/' && !isChar) {
 		    	int next = fgetc(fp);
 
 			if (next == '*') {
