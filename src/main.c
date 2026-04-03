@@ -7,6 +7,8 @@
 #include <stdlib.h>
 #include <ctype.h>
 
+#include "type_case.h"
+
 // List of operators
 const char *operators[] = {
 	"{:", "}:", ":=", "..", "<<", ">>", "<>", "<=", ">=", "**", "==", "!=", "=>", "<", ">", "(", ")", "+", 
@@ -105,7 +107,7 @@ int main(int argc, char* argv[]) {
 	int isChar = 0; 
 	char cArr[4]; 
 	int cInd = 0; 
-	
+
 	int isComment = 0; 
 	char comArr[256]; 
 	int comInd = 0; 
@@ -116,20 +118,11 @@ int main(int argc, char* argv[]) {
 	while ((ch = fgetc(fp)) != EOF) {
 	    	if (isspace(ch)) continue;
 
-	    	// handle Comments
-	    	if (ch == '/') {
-			int next = fgetc(fp);
-			if (next == '*') {
-		    		// Read until "*/" is found
-		    		int prev = 0;
-		    		while ((ch = fgetc(fp)) != EOF) {
-					if (prev == '*' && ch == '/') break;
-					prev = ch;
-		    		}
-		    		continue; 
-			} else {
-		    		ungetc(next, fp);
+			// handle Comments
+			if (ch == '/') {
+				comment(ch, fp, &isComment);
 			}
+				if (isComment) {
 	    	}
 
 	    	// Handle Strings
